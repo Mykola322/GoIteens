@@ -1,0 +1,16 @@
+{
+    "Andrew": {
+    "position": "Менеджер",
+    "salary": 30000,
+    "start_date": "22.02.2024",
+    "name": "Андрій",
+    "password": "1234567a"
+},
+"Dima": {
+    "position": "Продавець",
+    "salary": "14000",
+    "start_date":"30.03.2024",
+    "name": "Дмитро",
+    "password": "1234567b"
+}
+}

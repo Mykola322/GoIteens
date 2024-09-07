@@ -11,23 +11,23 @@ def add_animal(animals: list) -> list:
                 print("\nТаку тваринку вже було додано до списку\nНатисніть 'enter' для продовження\n")
             else:
                 animals.append(animal)
-                print("\nНова тваринка додана до списку\nНатисніть'enter'для продовження")
+                print("\nНову тваринку успішно додано до списку\nНатисніть'enter'для продовження")
             return animals
                       # ANIMALS.remove(animal), ANIMALS_CURED.append(animal)
 
 
 def cured_animal(animals: list) -> list:
             anim = input("\nВведіть список вилікуваних тваринок через пробіл:\n").split()
-            animals_cured.extend(anim)
+            animals.extend(anim)
             print("\nСписок вилікуваних тваринок розширено")
             return animals
                                         # ANIMALS_CURED
 
 
 def list_cured_animals(animals_cured: list) -> None:
-        print("\nCписок проданих товарів\n")
-        for i, animal in enumerate(animals_cured, start=4):
-                print(f"{i}: {animal}")
+        print("\nCписок вилікуваних тваринок: \n")
+        for i, animals in enumerate(animals_cured, start=1):
+                print(f"{i}: {animals}")
 
 
 def del_animal(animals: list) ->list:

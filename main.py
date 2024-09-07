@@ -17,8 +17,8 @@ from src.employees import (
     change_salary,
     change_position,
 )
+from src import files_actionts
 from files.list_files import HELP
-from src import files_exionts
 
 
 DELIMITER = "-" *28
@@ -36,26 +36,11 @@ def help(path: str = HELP) -> None:
 
 
 def main():
-    employees = {
-        "Andrew": {
-        "position": "Менеджер",
-        "salary": 30000,
-        "start_date": "22.02.2024",
-        "name": "Андрій",
-        "password": "1234567a"
-    },
-    "Dima": {
-        "position": "Продавець",
-        "salary": "14000",
-        "start_date":"30.03.2024",
-        "name": "Дмитро",
-        "password": "1234567b"
-    }
-}
+    employees = files_actionts.open_employees()
 
-    animals = files_exionts.open_animals()
+    animals = files_actionts.open_animals()
 
-    animals_cured = files_exionts.open_animals_cured()
+    animals_cured = files_actionts.open_animals_cured()
 
     log = []
     using_commands = {}
@@ -81,7 +66,7 @@ def main():
         employees[login]["password"] = password
 
     else:
-        input(f"\nПароль успішно створено: '{password}'. Запам'ятайте його! 'enter' для продовження")
+        input(f"\nПароль було успішно створено: '{password}'. Запам'ятайте його! 'enter' для продовження")
 
     password_input = input("\nВведіть пароль: ")
 
@@ -105,6 +90,8 @@ def main():
             case "list_cured_animals":
                 list_cured_animals(animals)
             case "exit":
+                files_actionts.save_animals(animals)
+                files_actionts.save_animals_cured(animals_cured)
                 exit()
             case "del_animal":
                 del_animal(animals)
