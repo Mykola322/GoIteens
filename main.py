@@ -37,13 +37,11 @@ def help(path: str = HELP) -> None:
 
 def main():
     employees = files_actionts.open_employees()
-
     animals = files_actionts.open_animals()
-
     animals_cured = files_actionts.open_animals_cured()
+    log = files_actionts.open_log()
+    using_commands = files_actionts.open_using_commands()
 
-    log = []
-    using_commands = {}
 
     login = input("Введіть свій логін користувача: ")
     password = employees.get(login, {}).get("password")
@@ -92,6 +90,9 @@ def main():
             case "exit":
                 files_actionts.save_animals(animals)
                 files_actionts.save_animals_cured(animals_cured)
+                files_actionts.save_employees(employees)
+                files_actionts.save_log(log)
+                files_actionts.save_using_commands(using_commands)
                 exit()
             case "del_animal":
                 del_animal(animals)
@@ -121,5 +122,4 @@ def main():
 
 
 if __name__ == "__main__":
-     main()
-
+    main()
