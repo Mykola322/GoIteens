@@ -1,7 +1,7 @@
 class Nissan():
     car_model = "GTR"
     run = False
-    fuel = False
+    deffuel = False
 
     def fill_Up(self):
         self.fuel = True
