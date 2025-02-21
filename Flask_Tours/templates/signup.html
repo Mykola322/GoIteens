@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block center %}
+<form action="{{ url_for('signup') }}" method="post">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.first_name.label(class="form-label") }}
+        {{ form.first_name(class="form-control") }}
+    </div>
+</form>
+    <div class="form-group">
+        {{ form.last_name.label(class="form-label") }}
+        {{ form.last_name(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.email_name.label(class="form-label") }}
+        {{ form.email_name(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.password_name.label(class="form-label") }}
+        {{ form.password_name(class="btn btn-primary") }}
+    </div>
+    <div class="form-group">
+        {{ form-submit(class="btn btn-primary") }}
+    </div>
+{% endblock center %}
