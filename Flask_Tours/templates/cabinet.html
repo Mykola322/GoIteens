@@ -4,11 +4,10 @@
   </header>
   <main class="container mt-3">
     <h1 class="display-5 mt-4">Вирушаємо{{ departures[dep_eng] }}</h1>
-    <p class="mb-4">Знайдено {{ tours|length }} тура(ів)</p>
-    <!-- CARDS -->
+    <p class="mb-4">Знайдено{{ tours|lenght }} тур(а)ів</p>
     <div class="row mt-5">
 
-      {% tour in tours %}
+      {% for tour in current_user.tours %}
       <div class="col-4">
         <div class="card mb-4">
           <img src="{{ tour.picture }}" class="card-img-top img-fluid" alt="">
@@ -19,6 +18,7 @@
           </div>
         </div>
       </div>
+      {% endfor %}
 
     </div>
   </main>
