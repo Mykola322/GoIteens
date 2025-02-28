@@ -93,7 +93,7 @@ def signup():
         flash("Успішно зареєстровано!", "success")
         return redirect(url_for("login"))
 
-    return render_template("login.html", form=signup_form)
+    return render_template("signup.html", form=signup_form)
 
 
 

@@ -7,20 +7,19 @@
         {{ form.first_name.label(class="form-label") }}
         {{ form.first_name(class="form-control") }}
     </div>
-</form>
     <div class="form-group">
         {{ form.last_name.label(class="form-label") }}
         {{ form.last_name(class="form-control") }}
     </div>
     <div class="form-group">
-        {{ form.email_name.label(class="form-label") }}
-        {{ form.email_name(class="form-control") }}
+        {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control") }}
     </div>
     <div class="form-group">
-        {{ form.password_name.label(class="form-label") }}
-        {{ form.password_name(class="btn btn-primary") }}
+        {{ form.password.label(class="form-label") }}
+        {{ form.password(class="form-control") }}
     </div>
-    <div class="form-group">
+
         {{ form-submit(class="btn btn-primary") }}
-    </div>
+</form>
 {% endblock center %}
