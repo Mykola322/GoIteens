@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="container mt-3">
+
+    <div class="row mt-3">
+      {% for product in products %}
+      <div class="col-4">
+        <div class="card mb-4">
+             <img class="card-img-top embed-responsive-item" src="{{ product.img_url }}" height="500px" />
+          <div class="card-body">
+            <h1>{{ product.name }}</h1>
+            <h2 class="h5 card-title">{{ product.price }}</h2>
+            <a href="{{ url_for('get_tour', tour_id=tour.id) }}" class="btn btn-sm btn-primary">Деталі товару</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </main>
+  {% endblock content %}
