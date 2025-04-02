@@ -19,7 +19,7 @@ def get_product(product_id):
     form = ReviewForm()
 
     if form.validate_on_submit():
-        text = form.data.text
+        text = form.text.data
         name = form.name.data
         data_actions.add_review(product_id, text, name)
         return redirect(url_for("get_product", product_id=product_id))

@@ -11,7 +11,7 @@
           <div class="card-body">
             <h1>{{ product.name }}</h1>
             <h2 class="h5 card-title">{{ product.price }}</h2>
-            <a href="{{ url_for('get_tour', tour_id=tour.id) }}" class="btn btn-sm btn-primary">Деталі товару</a>
+            <a href="{{ url_for('get_product', product_id=product.id) }}" class="btn btn-sm btn-primary">Деталі товару</a>
           </div>
         </div>
       </div>

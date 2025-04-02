@@ -40,37 +40,18 @@
   </table>
 
   <form action="{{ url_for('get_product', product_id=product_id) }}" method="post">
-    {{ form.hiden_tag() }}
+    {{ form.hidden_tag() }}
 
     <div class="form-group">
       {{ form.text.label(class="form-label") }}
-      {{ form.text.(class="form-label") }}
+      {{ form.text(class="form-control") }}
     </div>
     <div class="form-group">
       {{ form.name.label(class="form-label") }}
-      {{ form.text(class="form-control") }}
+      {{ form.name(class="form-control") }}
     </div>
     <div class="form-group">
       {{ form.submit(class="btn btn-primary") }}
     </div>
   </form>
 {% endblock content %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {% endblock content %}
