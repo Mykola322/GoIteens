@@ -17,7 +17,7 @@ class Reveiw(db.Model):
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), nullable=True, server_default=None)
     user: Mapped["User"] = relationship()
 
-
+ 
 @dataclass
 class Product(db.Model):
     __tablename__ = "products"
