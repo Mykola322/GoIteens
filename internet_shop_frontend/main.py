@@ -7,7 +7,7 @@ from src.data.forms import ReviewForm
 app = Flask(__name__, template_folder="src/templates")
 app.secret_key = "aboba"
 
-
+ 
 @app.get("/")
 def index():
     products = data_actions.get_products()
