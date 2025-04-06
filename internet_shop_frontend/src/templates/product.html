@@ -7,7 +7,7 @@
       <img src="{{ product.img_url }}" class="w-75" alt="">
       <p class="my-4 w-75">{{ product.description }}</p>
 
-    <form action="{{ url_for('buy_product', product_id=product_id) }}" method="post">
+    <form action="{{ url_for('buy_product', product_id=product.id) }}" method="post">
       <div class="form-group">
         <label class="form-label">Ваше ім'я</label>
         <input type="text" name="name" class="form-control">
@@ -39,7 +39,7 @@
     </tbody>
   </table>
 
-  <form action="{{ url_for('get_product', product_id=product_id) }}" method="post">
+  <form action="{{ url_for('get_product', product_id=product.id) }}" method="post">
     {{ form.hidden_tag() }}
 
     <div class="form-group">
